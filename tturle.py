@@ -1,39 +1,60 @@
 from turtle import Turtle, Screen
+import random
 
+Screen().colormode(255)
 chinnu=Turtle()
 chinnu.shape("turtle")
-chinnu.color("violet")
+def random_rgb():
+    return (random.randint(0,255),
+            random.randint(0,255),
+            random.randint(0,255))
 
 
 
-chinnu.pendown()
-chinnu.forward(5)
 
-chinnu.penup()
-chinnu.forward(5)
+dir=[0,90,180,270]
+def execution(a):
+          
+          chinnu.color(random_rgb())
+          
+          for x in range(a):
+            chinnu.forward(4)
+            chinnu.right(2)   
 
-chinnu.pendown()
-chinnu.forward(5)
+chinnu.home()
+chinnu.speed(24)
+#i=int(input( " Enter Range "))
 
-chinnu.penup()
-chinnu.forward(5)
-chinnu.pendown()
-chinnu.forward(5)
+execution(500)    
+ 
+        
 
-chinnu.penup()
-chinnu.forward(5)
-chinnu.pendown()
-chinnu.forward(5)
+Screen().exitonclick()
 
-chinnu.penup()
-chinnu.forward(5)
-chinnu.pendown()
-chinnu.forward(5)
 
-chinnu.penup()
-chinnu.forward(5)
-chinnu.pendown()
-chinnu.forward(5)
 
-chinnu.penup()
-chinnu.forward(5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
