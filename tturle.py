@@ -1,60 +1,27 @@
 from turtle import Turtle, Screen
 import random
 
-Screen().colormode(255)
-chinnu=Turtle()
-chinnu.shape("turtle")
 def random_rgb():
     return (random.randint(0,255),
             random.randint(0,255),
             random.randint(0,255))
 
+screen = Screen()
+screen.colormode(255)
 
+chinnu = Turtle()
+chinnu.speed(0)
 
+chinnu.width(1)
+def spirograph(radius, gap):
+    for _ in range(int(360 / gap)):
+        chinnu.color(random_rgb())
+        chinnu.circle(radius)
+        chinnu.setheading(chinnu.heading() + gap)
 
-dir=[0,90,180,270]
-def execution(a):
-          
-          chinnu.color(random_rgb())
-          
-          for x in range(a):
-            chinnu.forward(4)
-            chinnu.right(2)   
+    chinnu.home()        
+    chinnu.setheading(0)
 
-chinnu.home()
-chinnu.speed(24)
-#i=int(input( " Enter Range "))
+spirograph(radius=112, gap=3)
 
-execution(500)    
- 
-        
-
-Screen().exitonclick()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+screen.exitonclick()
