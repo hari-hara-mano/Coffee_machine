@@ -10,14 +10,15 @@ color_list=[ (250, 228, 16), (212, 13, 9), (199, 12, 36), (230, 228, 6), (196, 7
 chinnu=manu.Turtle()
 screen=Screen()
 ran=rand.Random()
-chinnu.speed(4004)
+chinnu.speed(0)
 chinnu.setheading(210)
 chinnu.penup()
 chinnu.fd(600)
 chinnu.setheading(180)
 chinnu.fd(120)
 chinnu.setheading(0)
-chinnu.pendown()
+chinnu.hideturtle()
+
 
 chinnu.shape("turtle")
 screen.colormode(255)
@@ -27,7 +28,7 @@ while x<23:
         chinnu.dot(15, ran.choice(color_list))
         chinnu.penup()
         chinnu.fd(30)
-        chinnu.pendown()
+        
 
     chinnu.penup()
     chinnu.setheading(90)
@@ -35,7 +36,6 @@ while x<23:
     chinnu.setheading(180)
     chinnu.fd(1290)
     chinnu.setheading(0)
-    chinnu.pendown()
     x+=1
 
 
