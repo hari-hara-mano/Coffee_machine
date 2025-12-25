@@ -6,6 +6,7 @@ UP=90
 DOWN=270
 LEFT=180
 RIGHT=0
+
 class Snake:
 
     def __init__(self):      
@@ -14,12 +15,19 @@ class Snake:
         self.head=self.segments[0]
 
     def create_snake(self):
-        for i in POSITIONS:
+        for position in POSITIONS:
+            self.add_segment(position)
+        
+    def add_segment(self,position):       
             chinnu=Turtle("turtle")
             chinnu.color("cyan2")
             chinnu.penup()
-            chinnu.goto(i)
-            self.segments.append(chinnu)
+            chinnu.goto(position)
+            self.segments.append(chinnu) 
+
+    def extend(self):
+        self.add_segment(self.segments[-1].position())
+        
 
     def move(self):
 
