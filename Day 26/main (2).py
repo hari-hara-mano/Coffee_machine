@@ -27,8 +27,19 @@ for (index, row) in student_data_frame.iterrows():
 
 data= pandas.read_csv("nato_phonetic_alphabet.csv")
 
-dict_data=data.to_dict()
 
+
+dict_data={ row.letter : row.code for (index,row) in data.iterrows() }
 print(dict_data)
 
-#f_dict={ i:j for i,j in dict_data.iterrows()}
+
+user=(input("enter your name: ")).upper()
+
+print(user)
+
+
+p_list=[dict_data[i] for i in user]
+print(p_list)
+
+
+
