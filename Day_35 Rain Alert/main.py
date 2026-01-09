@@ -38,7 +38,7 @@ if any(id < 700 for id in weather_ids) :
         message = client.messages.create(
             body="Hey bujji, just a test message from code, love you :)",
             from_="+16825028861",
-            to="+918686886848",
+            to="+918586896848",
         )
 
         print(message.body)
