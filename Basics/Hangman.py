@@ -2,7 +2,7 @@ import random
 
 stages=["ANIMATION 0","ANIMATION 1","ANIMATION 2","ANIMATION 3","ANIMATION 4","ANIMATION 5","ANIMATION 6","ANIMATION 7"]
 
-word_list=["baboon","camel","aardvark","manohar","Chinnu","harika"]
+word_list=["baboon","camel","aardvark","manor","Chinna","harishtha"]
 chosen_word=random.choice(word_list)
 print(chosen_word)
 
